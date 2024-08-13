@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: AzureAdB2cSample
+    tenant: my-tenant-name                              # Azure AD B2C tenant ID
+    tenant_id: 12345xxx-12345-12345-1xxx-x1234x567xxx   # Azure AD B2C tenant ID
+    client_id: 1x23x4x-x123-5678-90xx-x12345x6789x   # Application (client) ID on Azure AD B2C
+    secret: xxXXX~.XXxxxx_XxXXX-xxxxxXx6x2XXXxxxxXXX  # Application (client) secret
+    user_flow: B2C_1_sample_01                        # User flow name
+    scope: openid offline_access                    # Scopes (openid,offline_access,client_id/user_flow)
+  output:
+    ansi:
+      enabled: always
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
+    suffix: .html
+  devtools:
+    livereload:
+      enabled: true
+    remote:
+      restart:
+        enabled: true
+    
